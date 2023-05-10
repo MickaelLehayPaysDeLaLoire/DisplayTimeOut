@@ -1,3 +1,4 @@
+Projet Visual Studio 2022 écrit en C# utilisant le Framework .NET 6.0
 # DisplayTimeOut
 Programme affichant un compte à rebours avant arret du PC
 https://github.com/MickaelLehayPaysDeLaLoire/DisplayTimeOut/releases/download/V1.0/UI-AvecLOGO.PNG
@@ -12,3 +13,5 @@ Exemple
 DisplayTimeOut.exe 25 20
 
 -> Affichera un message comme quoi l'ordinateur n'a pas été utilisé depuis 25mn et affiche un compte à rebours à partir de 20 secondes.
+
+
