@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <StartupObject>DisplayTimeOut.App</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="istockphoto-1311617386-612x612.jpg" />
+    <None Remove="LOGO.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="istockphoto-1311617386-612x612.jpg" />
+    <Resource Include="LOGO.png" />
+  </ItemGroup>
+
+</Project>
