@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.IO.Pipes;
 using System.Runtime.ConstrainedExecution;
+using System.Text.RegularExpressions;
 // using System.Runtime.Remoting.Messaging;
 using System.Windows;
 using System.Windows.Media;
@@ -23,10 +24,10 @@ namespace DisplayTimeout
         private readonly DispatcherTimer MyTimer = new DispatcherTimer();
         private int Countdown = 10;
         private int ShutdownDelay = 20;
+        String currentDIrectory = Directory.GetCurrentDirectory();
         public MainWindow()
         {
-            InitializeComponent();
-            String currentDIrectory = Directory.GetCurrentDirectory();
+            InitializeComponent();            
             if (File.Exists(currentDIrectory + @"\logo.png"))
             {
                 // il y a une image qui s'appelle logo.png dans le répertoire de l'application
@@ -71,8 +72,9 @@ namespace DisplayTimeout
                 processStartInfo.WorkingDirectory = Environment.SystemDirectory;
                 var start = Process.Start(processStartInfo);
                 start.WaitForExit();
-                DateTime thisDay = DateTime.Today;
-                System.IO.File.AppendAllLines(@"c:\Shutdown\log.txt", new string[] { thisDay.ToString()+" : Commande shutdown lancée " });
+                DateTime thisDay = DateTime.Now;                
+                var logLine = new string[] { thisDay.ToString("dddd, dd MMMM yyyy HH:mm:ss") + " : Commande shutdown lancée" };
+                System.IO.File.AppendAllLines(Path.GetDirectoryName(currentDIrectory) + @"\log.txt", logLine);
                 // App.Current.MainWindow.Close();  ne pas fermer la fenêtre, elle sera fermée par la commande shutdown
             }
         }
@@ -81,8 +83,9 @@ namespace DisplayTimeout
         {
             MyTimer.Stop();
             CancedShutdown();
-            DateTime thisDay = DateTime.Today;
-            System.IO.File.AppendAllLines(@"c:\Shutdown\log.txt", new string[] { thisDay.ToString() + ": Arret annulé " });
+            DateTime thisDay = DateTime.Now;
+            var logLine = new string[] { thisDay.ToString("dddd, dd MMMM yyyy HH:mm:ss")+ " : Arret annulé " };
+            System.IO.File.AppendAllLines(Path.GetDirectoryName(currentDIrectory) + @"\log.txt", logLine);
             RestartService("ShutDownService");            
             App.Current.MainWindow.Close();
         }

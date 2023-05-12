@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ati1\\source\\repos\\DisplayTimeOut\\DisplayTimeOut.csproj": {}
+    "C:\\Users\\ati1\\source\\Github\\DisplayTimeOut\\DisplayTimeOut\\DisplayTimeOut.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ati1\\source\\repos\\DisplayTimeOut\\DisplayTimeOut.csproj": {
+    "C:\\Users\\ati1\\source\\Github\\DisplayTimeOut\\DisplayTimeOut\\DisplayTimeOut.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ati1\\source\\repos\\DisplayTimeOut\\DisplayTimeOut.csproj",
+        "projectUniqueName": "C:\\Users\\ati1\\source\\Github\\DisplayTimeOut\\DisplayTimeOut\\DisplayTimeOut.csproj",
         "projectName": "DisplayTimeOut",
-        "projectPath": "C:\\Users\\ati1\\source\\repos\\DisplayTimeOut\\DisplayTimeOut.csproj",
+        "projectPath": "C:\\Users\\ati1\\source\\Github\\DisplayTimeOut\\DisplayTimeOut\\DisplayTimeOut.csproj",
         "packagesPath": "C:\\Users\\ati1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ati1\\source\\repos\\DisplayTimeOut\\obj\\",
+        "outputPath": "C:\\Users\\ati1\\source\\Github\\DisplayTimeOut\\DisplayTimeOut\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Users\\ati1\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder"
